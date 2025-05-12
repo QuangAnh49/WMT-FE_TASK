@@ -1,0 +1,161 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background-color: #f4f4f4;
+  padding: 0 5vw;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+.carousel {
+  display: flex;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  gap: 20px;
+}
+
+.carousel-item {
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  min-width: 100%;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.carousel-item img {
+  border-radius: 10px;
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-item h2 {
+  margin: 10px 0;
+}
+
+.carousel-item p {
+  color: #555;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.controls button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  padding: 10px 20px;
+  color: #fff;
+}
+
+.controls button:disabled {
+  cursor: not-allowed;
+  background-color: #ccc;
+}
+
+/* Tablet view: 2 items per row */
+@media (min-width: 768px) {
+  .carousel-item {
+    min-width: calc(50% - 20px);
+  }
+}
+
+/* Desktop view: 3 items per row */
+@media (min-width: 1280px) {
+  .carousel-item {
+    min-width: calc(100% / 3 - 20px);
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  position: relative;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s linear;
+  opacity: 0;
+  transform: scale(0);
+}
+
+.modal-content.show {
+  animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+.modal-content.hidden {
+  animation: fadeOut 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content img {
+  max-width: 600px;
+  width: 40%;
+  border-radius: 20px;
+}
+
+.close-button {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 50px;
+  cursor: pointer;
+}

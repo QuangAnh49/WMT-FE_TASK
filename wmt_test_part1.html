@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Carousel</title>
+    <link rel="stylesheet" href="./wmt_test_part1.css" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <h2>Product Carousel</h2>
+    <div class="carousel">
+      <div class="carousel-item" index="0">
+        <img src="https://games.assets.gameloft.com/assets/CSD_Game_Avatar_e98bc4679e.png" alt="Product 1" />
+        <h2 class="item-name">Carmen Sandiego</h2>
+        <p class="item-description">Action/Adventure, Puzzle, Strategy</p>
+      </div>
+      <div class="carousel-item" index="1">
+        <img src="https://games.assets.gameloft.com/assets/DS_Icon_9892299b20.jpg" alt="Product 2" />
+        <h2 class="item-name">Disney Speedstorm</h2>
+        <p class="item-description">Racing, Arcade, Action/Adventure</p>
+      </div>
+      <div class="carousel-item" index="2">
+        <img src="https://games.assets.gameloft.com/assets/ALU_icon_ee38538e9a.jpg" alt="Product 3" />
+        <h2 class="item-name">Asphalt Legends Unite</h2>
+        <p class="item-description">Racing, Multiplayer, Sports</p>
+      </div>
+      <div class="carousel-item" index="3">
+        <img src="https://games.assets.gameloft.com/assets/DDV_Logo2_360_9951174f4f.jpg" alt="Product 3" />
+        <h2 class="item-name">Disney Dreamlight Valley</h2>
+        <p class="item-description">Action/Adventure, Role Playing, Tycoon/Simulation, Casual</p>
+      </div>
+      <div class="carousel-item" index="4">
+        <img src="https://games.assets.gameloft.com/assets/Oregon_Trail_App_Icon_29b4c1e941.jpg" alt="Product 3" />
+        <h2 class="item-name">The Oregon Trail</h2>
+        <p class="item-description">Action/Adventure</p>
+      </div>
+      <div class="carousel-item" index="5">
+        <img src="https://games.assets.gameloft.com/assets/DH_6_icon_7fb8baf280.jpg" alt="Product 3" />
+        <h2 class="item-name">Dungeon Hunter 6</h2>
+        <p class="item-description">Action/Adventure, Role Playing, Multiplayer</p>
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>Product Details</h2>
+        <img src="" alt="Product Image" id="modal-image" />
+        <h3 id="modal-title"></h3>
+        <p id="modal-description"></p>
+      </div>
+    </div>
+  </body>
+  <script src="./wmt_test_part2.js"></script>
+</html>
