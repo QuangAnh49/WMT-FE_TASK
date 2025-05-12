@@ -26,6 +26,7 @@ const products = [
 
 console.log(calculateTotalValue(products)); // Logs the total value
 
+// Add event listeners to each item in the carousel and show the modal
 items.forEach((item) => {
   item.addEventListener("click", function () {
     modalContent.classList.add("show");
@@ -36,16 +37,19 @@ items.forEach((item) => {
   });
 });
 
+// Close the modal when clicking outside of it
 window.onclick = function (event) {
   if (event.target == modal) {
     modalContent.classList.add("hidden");
   }
 };
 
+// Close the modal when clicking the close button
 closeButton.onclick = function () {
   modalContent.classList.add("hidden");
 };
 
+// Hide the modal after the animation ends
 modalContent.addEventListener("animationend", function () {
   if (modalContent.classList.contains("hidden")) {
     modalContent.classList.remove("show");
